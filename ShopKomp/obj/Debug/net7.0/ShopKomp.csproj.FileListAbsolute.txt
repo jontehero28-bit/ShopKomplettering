@@ -1,0 +1,15 @@
+c:\programmering2cs\ShopKomplettering\ShopKomp\bin\Debug\net7.0\ShopKomp.exe
+c:\programmering2cs\ShopKomplettering\ShopKomp\bin\Debug\net7.0\ShopKomp.deps.json
+c:\programmering2cs\ShopKomplettering\ShopKomp\bin\Debug\net7.0\ShopKomp.runtimeconfig.json
+c:\programmering2cs\ShopKomplettering\ShopKomp\bin\Debug\net7.0\ShopKomp.dll
+c:\programmering2cs\ShopKomplettering\ShopKomp\bin\Debug\net7.0\ShopKomp.pdb
+c:\programmering2cs\ShopKomplettering\ShopKomp\obj\Debug\net7.0\ShopKomp.csproj.AssemblyReference.cache
+c:\programmering2cs\ShopKomplettering\ShopKomp\obj\Debug\net7.0\ShopKomp.GeneratedMSBuildEditorConfig.editorconfig
+c:\programmering2cs\ShopKomplettering\ShopKomp\obj\Debug\net7.0\ShopKomp.AssemblyInfoInputs.cache
+c:\programmering2cs\ShopKomplettering\ShopKomp\obj\Debug\net7.0\ShopKomp.AssemblyInfo.cs
+c:\programmering2cs\ShopKomplettering\ShopKomp\obj\Debug\net7.0\ShopKomp.csproj.CoreCompileInputs.cache
+c:\programmering2cs\ShopKomplettering\ShopKomp\obj\Debug\net7.0\ShopKomp.dll
+c:\programmering2cs\ShopKomplettering\ShopKomp\obj\Debug\net7.0\refint\ShopKomp.dll
+c:\programmering2cs\ShopKomplettering\ShopKomp\obj\Debug\net7.0\ShopKomp.pdb
+c:\programmering2cs\ShopKomplettering\ShopKomp\obj\Debug\net7.0\ShopKomp.genruntimeconfig.cache
+c:\programmering2cs\ShopKomplettering\ShopKomp\obj\Debug\net7.0\ref\ShopKomp.dll

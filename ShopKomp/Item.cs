@@ -17,17 +17,17 @@ public class Item
             }
         }
     }
-    //sätter gränserna att ett items space value bara kan vara mellan 0 och 20
+    //Limits the required space value between 1 and 20
 
 }
-//skapar klassen items
+//Item Class created
 public class VegetableItem : Item
 {
     public string? Vegetables { get; set; }
     string[] _namesVegetableItems = { "Tomato", "Carrot", "Potato", "Broccoli", "Beet"};
 
     private static bool _lastWasFresh = false;
-    //bool för att kolla om senaste item var heavy
+    //Need to check if the item was fresh so a bool here.
 
     public VegetableItem()
     {
@@ -36,7 +36,7 @@ public class VegetableItem : Item
         Vegetables = GetFresh();
         _lastWasFresh = !_lastWasFresh;
     }
-    //konstruktor
+    //constructor for printing out the vegetable items.
 
     public virtual string GetNames(int item)
     {
@@ -44,7 +44,7 @@ public class VegetableItem : Item
 
         return i;
     }
-    //metod för att få ut namn på item
+    //To get the names for the items method.
     public string GetFresh()
     {
         string i;
@@ -59,9 +59,9 @@ public class VegetableItem : Item
         return i;
 
     }
-    //metod för att få ut Weight på items
+    //get the "fresh" or "moldy" for the vegetables.
 }
-//skapar subclass weighted items av item
+//Creates a subclass vegetables item for superclass item
 public class SmellyItem : VegetableItem
 {
     public string? ItemTotal { get; set; }
@@ -90,13 +90,14 @@ public class SmellyItem : VegetableItem
         }
         _lastIsSmelly = !_lastIsSmelly;
     }
+    //simillar structure to previous subclass. This is construct.
     public override string GetNames(int item)
     {
         string i = _namesSmellyItems[item];
 
         return i;
     }
-    //ändrar metoden getNames så den följer listan namesWeapon istället
+    // Chngae getnames method so it would follow my smellyitem list
     public string GetSmell()
     {
         string i;
@@ -110,29 +111,8 @@ public class SmellyItem : VegetableItem
         }
         return i;
     }
-    //metod för att få längd på Weapon
+    //Simmillar to previous one. Get one of these alternatives for the vegetables.
 
 
 }
-//subclass weapon av weightedItems
-public class ShopItem : Item
-{
-    public int Cost { get; set; }
-
-    bool _soldOut = false;
-    public bool SoldOut
-    {
-        get
-        {
-            return _soldOut;
-        }
-        set
-        {
-            _soldOut = value;
-        }
-    }
-    public ShopItem()
-    {
-        Cost = (Space * 10);
-    }
-}
+//subclass smellyitem to subclass vegetable item and superclass item.

@@ -29,7 +29,7 @@ public class Inventory //inventoryclass
         }
     }
 
-    //gör så man inte kan ändra på värdet på space
+    //fixed so that the could not change the limit to available space in the inventory.
     public Stack<Item> Items = new();
     public void ListItemsInventory(Inventory inventory)
     {
@@ -50,14 +50,15 @@ public class Inventory //inventoryclass
 
         }
         Console.WriteLine("och plats kvar i inventory " + inventory.InventorySpace);
-        //void för att skriva ut alla items i inventory som skriver även ut weight och Length om de har det
+        //Prints out all of the items in the inventory
+        //also includes if it is big and smelly
     }
     public void ResetGameInventory(Inventory inventory)
     {
         inventory.InventorySpace = 20;
         inventory.Items.Clear();
     }
-    //startar om inventory, tar bort allt i det och tar upp space till max
+    //restart the inventory and reset inventory space
     public void AddItem(Inventory inventory, Market market, int index)
     {
         inventory.InventorySpace -= market.items[index].Space;
@@ -65,4 +66,4 @@ public class Inventory //inventoryclass
         market.items.RemoveAt(index);
     }
 }
-//skapar classen inventory med en lista som kan innehålla items
+//class inventory that can have item inside of it.

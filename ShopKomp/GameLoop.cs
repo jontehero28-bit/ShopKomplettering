@@ -1,20 +1,20 @@
 public class GameLoop
 {
     Utility utility = new(); // think of it as a collection of functions
-    Market market = new();
-    Inventory inventory = new();
+    Market market = new();  //market
+    Inventory inventory = new();  //inventory system
     // Utility, Market, and Inventory classes are instantiated
 
     public void Run()
     {
-        bool game = false; // variable for game state
+        bool GameOn = false; // variable for game state
 
         while (true)
         {
-            // method for starting the game and then restarting it
-            game = utility.RestartGame(inventory, market, game);
+            // method for starting the game and then restarting it when it is over.
+            GameOn = utility.RestartGame(inventory, market, GameOn);
 
-            while (game) // main loop for the game
+            while (GameOn) // main loop for the game
             {
                 market.ListItemsMarket(market);
                 int i = market.ItemAnswer(market.items.Count) - 1;
@@ -25,7 +25,7 @@ public class GameLoop
                 }
                 else // The game ends if inventory is 0
                 {
-                    game = false;
+                    GameOn = false;
                 }
             }
             Console.Clear();

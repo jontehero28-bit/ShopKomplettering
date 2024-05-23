@@ -8,10 +8,11 @@ public class Market
 
     public void ListItemsMarket(Market market)
     {
+
+        Console.WriteLine("Du är en mästare tjuv, vad vill du sno idag? ");
+        Console.WriteLine("Dessa föremål finns på markanden, kom ihåg att du har begränsat inventory");
         Console.WriteLine("");
-        Console.WriteLine("På marken finns det ");
-        Console.WriteLine("");
-        foreach (Item i in market.items)
+        foreach (Item i in market.items) //looks after items
         {
             if (i is VegetableItem)
             {
@@ -30,7 +31,7 @@ public class Market
         }
         Console.WriteLine("");
     }
-    //void för att skriva ut alla items i ground som skriver även ut weight och Length om de har det
+    //prints out all of the items on the market. Also it prints out its smell and size
 
     public void MarketBeginGame(Market market)
     {
@@ -43,37 +44,37 @@ public class Market
         {
             VegetableItem item = new();
             items.Add(item);
-            //sätter ut heavy på alla items som kan vara heavy
+            //Adds all the items that are vegetables
         }
-        //skapar items och sätter de i listan items
+        //Add them in the item list
         for (int i = 0; i < 6; i++)
         {
-            SmellyItem weapon = new();
-            items.Add(weapon);
+            SmellyItem VegetableItem = new();
+            items.Add(VegetableItem);
         }
-        //skapar weapon items i listan items
+        //Create and add vegetables
     }
-    public int ItemAnswer(int MarketItemsCount)
+    public int ItemAnswer(int MarketItemsCount)//Gets an answer in a number
     {
         Console.WriteLine("");
-        Console.WriteLine("Skriv ett nummer mellan 1-" + MarketItemsCount);
+        Console.WriteLine("Skriv nummer mellan 1 och" + MarketItemsCount); //print
         while (true)
         {
-            int j = function.GetNummber();//tryparse
-            if (j > 0 && j <= MarketItemsCount)
+            int _validNumber = function.GetNummber();
+            if (_validNumber > 0 && _validNumber <= MarketItemsCount)
             {
 
-                return j;
+                return _validNumber;
             }
-            //kollar att numret är inom det angivna intervalet
+            //check so the number is in the accurate length in marketitemscount.
 
             else
             {
-                Console.WriteLine("SKRIV ETT NUMMER MELLAN 1-" + MarketItemsCount + "!!!!");
+                Console.WriteLine("SKRIV ETT NUMMER MELLAN 1-" + MarketItemsCount + "!!!!"); //instruktions for the user that they put out a invalid input.
             }
-            //ger instruktioner ifall fel input
+            //If it is a invalid input it says so.
         }
     }
-    //får ett answer och retunerar en int
+    //After it gets an input it returns an answer
 
 }

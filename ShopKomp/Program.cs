@@ -1,5 +1,5 @@
-﻿
+﻿//hela huvud loop är i GameLoop fil
 
 
-GameLoop gameLoop = new();
-gameLoop.Run();
+GameLoop gameLoop = new(); //skapa gameloop
+gameLoop.Run();   //kör gameloop

@@ -1,6 +1,6 @@
 public class Market
 {
-    Utility function = new();
+    Utility utility = new();
     Item item = new();
     Inventory inventory = new();
     public List<Item> items = new() {};
@@ -67,7 +67,7 @@ public class Market
         Console.WriteLine("Skriv nummer mellan 1 och " + MarketItemsCount); //print
         while (true)
         {
-            int _validNumber = function.GetNummber();
+            int _validNumber = utility.GetNumber();
             if (_validNumber > 0 && _validNumber <= MarketItemsCount)
             {
 

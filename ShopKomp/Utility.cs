@@ -1,6 +1,6 @@
 public class Utility
 {
-    public int GetNummber()
+    public int GetNumber()
     {
         string? i = "";
 

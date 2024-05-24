@@ -43,13 +43,20 @@ public class Inventory //inventoryclass
             }
             if (i is SmellyItem)
             {
-                Console.Write(((SmellyItem)i).IsBig);
-                Console.Write(((SmellyItem)i).Vegetables);
+                if (((SmellyItem)i).IsBig) //if isBig true print big
+                {
+                    Console.Write("Big ");
+                }
+                else if (!((SmellyItem)i).IsBig) //look if isBig false, if it is then print little
+                {
+                    Console.Write("Small ");
+                }
+                
             }
             Console.Write(i.Name + ", ");
 
         }
-        Console.WriteLine("och plats kvar i inventory " + inventory.InventorySpace);
+        Console.WriteLine("plats kvar i inventory " + inventory.InventorySpace);
         //Prints out all of the items in the inventory
         //also includes if it is big and smelly
     }

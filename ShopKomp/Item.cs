@@ -29,15 +29,6 @@ public class VegetableItem : Item
     private static bool _lastWasFresh = false;
     //Need to check if the item was fresh so a bool here.
 
-    public VegetableItem()
-    {
-        int _number = Random.Shared.Next(_namesVegetableItems.Length);
-        Name = GetNames(_number);
-        Vegetables = GetFresh();
-        _lastWasFresh = !_lastWasFresh;
-    }
-    //constructor for printing out the vegetable items.
-
     public virtual string GetNames(int item)
     {
         string i = _namesVegetableItems[item];
@@ -60,6 +51,16 @@ public class VegetableItem : Item
 
     }
     //get the "fresh" or "moldy" for the vegetables.
+
+    public VegetableItem()
+    {
+        int _number = Random.Shared.Next(_namesVegetableItems.Length);
+        Name = GetNames(_number);
+        Vegetables = GetFresh();
+        _lastWasFresh = !_lastWasFresh;
+    }
+    //constructor for printing out the vegetable items.
+
 }
 //Creates a subclass vegetables item for superclass item
 public class SmellyItem : VegetableItem
@@ -79,18 +80,7 @@ public class SmellyItem : VegetableItem
             _isBig = value;
         }
     }
-    public SmellyItem()
-    {
-        int number = Random.Shared.Next(_namesSmellyItems.Length);
-        Name = GetNames(number);
-        ItemTotal = GetSmell();
-        if (Space >= 18)
-        {
-            IsBig = true;
-        }
-        _lastIsSmelly = !_lastIsSmelly;
-    }
-    //simillar structure to previous subclass. This is construct.
+
     public override string GetNames(int item)
     {
         string i = _namesSmellyItems[item];
@@ -112,6 +102,19 @@ public class SmellyItem : VegetableItem
         return i;
     }
     //Simmillar to previous one. Get one of these alternatives for the vegetables.
+    
+    public SmellyItem()
+    {
+        int number = Random.Shared.Next(_namesSmellyItems.Length);
+        Name = GetNames(number);
+        ItemTotal = GetSmell();
+        if (Space >= 18)
+        {
+            IsBig = true;
+        }
+        _lastIsSmelly = !_lastIsSmelly;
+    }
+    //simillar structure to previous subclass. This is construct.
 
 
 }

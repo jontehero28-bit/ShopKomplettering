@@ -2,6 +2,7 @@ public class Market
 {
     Utility function = new();
     Item item = new();
+    Inventory inventory = new();
     public List<Item> items = new() {};
 
     //skapar en lista items
@@ -10,7 +11,9 @@ public class Market
     {
 
         Console.WriteLine("Du är en mästare tjuv, vad vill du sno idag? ");
+        Console.WriteLine($"Du har {inventory.InventorySpace} platser i din inventory");
         Console.WriteLine("Dessa föremål finns på markanden, kom ihåg att du har begränsat inventory");
+        
         Console.WriteLine("");
         foreach (Item i in market.items) //looks after items
         {
@@ -20,15 +23,15 @@ public class Market
             }
             if (i is SmellyItem)
             {
-                if (((SmellyItem)i).IsBig)
+                if (((SmellyItem)i).IsBig) //if isBig true print big
                 {
                     Console.Write("Big ");
                 }
                 else if (!((SmellyItem)i).IsBig) //look if isBig false, if it is then print little
                 {
-                    Console.Write("Little ");
+                    Console.Write("Small ");
                 }
-                //Console.Write(((SmellyItem)i).IsBig);
+                
             }
             Console.WriteLine(i.Name + "(" + i.Space + ")" + ", ");
 
@@ -61,7 +64,7 @@ public class Market
     public int ItemAnswer(int MarketItemsCount)//Gets an answer in a number
     {
         Console.WriteLine("");
-        Console.WriteLine("Skriv nummer mellan 1 och" + MarketItemsCount); //print
+        Console.WriteLine("Skriv nummer mellan 1 och " + MarketItemsCount); //print
         while (true)
         {
             int _validNumber = function.GetNummber();

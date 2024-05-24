@@ -79,7 +79,7 @@ public class SmellyItem : VegetableItem
         {
             _isBig = value;
         }
-    }
+    } //return value for isbig
 
     public override string GetNames(int item)
     {
@@ -87,7 +87,7 @@ public class SmellyItem : VegetableItem
 
         return i;
     }
-    // Chngae getnames method so it would follow my smellyitem list
+    // Change getnames method so it would follow my smellyitem list
     public string GetSmell()
     {
         string i;
@@ -114,7 +114,7 @@ public class SmellyItem : VegetableItem
         }
         _lastIsSmelly = !_lastIsSmelly;
     }
-    //simillar structure to previous subclass. This is construct.
+    //simillar structure to previous subclass. This is a construct.
 
 
 }

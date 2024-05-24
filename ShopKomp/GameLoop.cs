@@ -16,8 +16,8 @@ public class GameLoop
 
             while (GameOn) // main loop for the game
             {
-                market.ListItemsMarket(market);
-                int i = market.ItemAnswer(market.items.Count) - 1;
+                market.ListItemsMarket(market);  
+                int i = market.SelectItem(market.items.Count) - 1;
                 if (inventory.InventorySpace > 0)
                 {
                     inventory.AddItem(inventory, market, i);
@@ -30,10 +30,10 @@ public class GameLoop
             }
             Console.Clear();
 
-            Console.WriteLine("All these stolen items are too heavy and you died.");
+            Console.WriteLine("All these stolen items are too heavy and you died."); //print for game over
             Console.WriteLine("");
             Console.WriteLine("Type Y or N to play again.");
-            if (utility.YesOrNo())
+            if (utility.ConfirmYes()) //method to start program again.
             {
             }
             else

@@ -61,7 +61,7 @@ public class Market
         }
         //Create and add vegetables in items list
     }
-    public int ItemAnswer(int MarketItemsCount)//Gets an answer in a number
+    public int SelectItem(int MarketItemsCount)//Gets an answer in a number
     {
         Console.WriteLine("");
         Console.WriteLine("Skriv nummer mellan 1 och " + MarketItemsCount); //print
@@ -77,11 +77,11 @@ public class Market
 
             else
             {
-                Console.WriteLine("SKRIV ETT NUMMER MELLAN 1-" + MarketItemsCount + "!!!!"); //instruktions for the user that they put out a invalid input.
+                Console.WriteLine("SKRIV ETT NUMMER MELLAN 1-" + MarketItemsCount + "!!!!"); //instructions for the user that they put out a invalid input.
             }
             //If it is a invalid input it says so.
         }
     }
-    //After it gets an input it returns an answer
+    //After it gets an input it returns an answer on which item the player have chosen.
 
 }

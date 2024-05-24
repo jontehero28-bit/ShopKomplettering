@@ -1,4 +1,4 @@
-﻿//hela huvud loop är i GameLoop fil
+﻿//hela main loop är i GameLoop fil
 
 
 GameLoop gameLoop = new(); //skapa gameloop

@@ -1,6 +1,11 @@
 public class Inventory //inventoryclass
 {
+
+    
     int _inventorySpace = 20;
+
+    public Stack<Item> Items = new();//items stack
+
     public int InventorySpace
     {
         get
@@ -30,7 +35,7 @@ public class Inventory //inventoryclass
     }
 
     //fixed so that the could not change the limit to available space in the inventory.
-    public Stack<Item> Items = new();
+    
     public void ListItemsInventory(Inventory inventory)  //Simillar to ListItemsMarket but intstead connected to inventory space.
     {
         Console.Clear();

@@ -2,13 +2,13 @@ public class Utility
 {
     public int GetNumber()
     {
-        string? i = "";
+        string? _input = ""; //renamed to get more con
 
         int _number;
-        while (!int.TryParse(i, out _number) == true) //tryparse
+        while (!int.TryParse(_input, out _number) == true) //tryparse
         {
-            i = Console.ReadLine();
-            if (!int.TryParse(i, out _number) == true)
+            _input = Console.ReadLine();
+            if (!int.TryParse(_input, out _number) == true)
             {
                 Console.WriteLine("DU MÅSTE SKRIVA ETT NUMMERRRRRRRRR");  //check if it a number. if not print out the message
 
@@ -21,7 +21,7 @@ public class Utility
     }
     //check that it is a number
 
-    public bool YesOrNo() //if user wants to play again input Y
+    public bool ConfirmYes() //if user wants to play again input Y renamed for consistensy
     {
         string? i = Console.ReadLine();
         if (i.ToUpper() == "Y")
@@ -36,11 +36,11 @@ public class Utility
 
     }
 
-    public bool RestartGame(Inventory inventory, Market market, bool GameOn) //method to restart the game. Should look after the yesorno inpit
+    public bool RestartGame(Inventory inventory, Market market, bool gameOn) //method to restart the game. Should look after the yesorno inpit
     {
         ResetGame(inventory, market);
-        GameOn = true;
-        return GameOn;
+        gameOn = true;
+        return gameOn;
     }
     
     

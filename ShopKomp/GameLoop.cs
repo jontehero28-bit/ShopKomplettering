@@ -3,7 +3,7 @@ public class GameLoop
     Utility utility = new(); // think of it as a collection of functions
     Market market = new();  //market
     Inventory inventory = new();  //inventory system
-    // Utility, Market, and Inventory classes are instantiated
+    // Utility, Market, and Inventory classes are created.
 
     public void Run()
     {

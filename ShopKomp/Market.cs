@@ -24,7 +24,11 @@ public class Market
                 {
                     Console.Write("Big ");
                 }
-                Console.Write(((SmellyItem)i).IsBig);
+                else if (!((SmellyItem)i).IsBig) //look if isBig false, if it is then print little
+                {
+                    Console.Write("Little ");
+                }
+                //Console.Write(((SmellyItem)i).IsBig);
             }
             Console.WriteLine(i.Name + "(" + i.Space + ")" + ", ");
 
@@ -52,7 +56,7 @@ public class Market
             SmellyItem VegetableItem = new();
             items.Add(VegetableItem);
         }
-        //Create and add vegetables
+        //Create and add vegetables in items list
     }
     public int ItemAnswer(int MarketItemsCount)//Gets an answer in a number
     {

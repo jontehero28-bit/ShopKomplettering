@@ -31,7 +31,7 @@ public class Inventory //inventoryclass
 
     //fixed so that the could not change the limit to available space in the inventory.
     public Stack<Item> Items = new();
-    public void ListItemsInventory(Inventory inventory)
+    public void ListItemsInventory(Inventory inventory)  //Simillar to ListItemsMarket but intstead connected to inventory space.
     {
         Console.Clear();
         Console.WriteLine("Du har: ");
@@ -66,4 +66,4 @@ public class Inventory //inventoryclass
         market.items.RemoveAt(index);
     }
 }
-//class inventory that can have item inside of it.
+//class items in inventory that puts the items that the player chose into the inventory
